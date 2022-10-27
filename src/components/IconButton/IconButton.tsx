@@ -1,5 +1,5 @@
 import { forwardRef } from "react";
-import { RippleEffect } from "../Ripple";
+import { RippleEffect } from "../RippleEffect";
 
 type Props = {
   children: React.ReactNode;

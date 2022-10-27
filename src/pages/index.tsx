@@ -1,5 +1,5 @@
 import type { NextPage } from "next";
-import { Layout } from "../features/layout/Layout";
+import { Layout } from "../modules/layout/Layout";
 
 const Home: NextPage = () => {
   return (

@@ -3,16 +3,11 @@ import { RippleEffect } from "./RippleEffect";
 
 describe("RippleEffect", () => {
   it("should have a role attribute of presentation", () => {
-    render(
-      <div data-testid="container">
-        <RippleEffect />
-      </div>
-    );
+    render(<RippleEffect />);
 
-    const container = screen.getByTestId("container");
-    const rippleEffect = container.firstChild;
+    const rippleEffect = screen.getByRole("presentation");
 
-    expect(rippleEffect).toHaveAttribute("role", "presentation");
+    expect(rippleEffect).toBeInTheDocument();
   });
 
   it("should have no ripples initially", () => {

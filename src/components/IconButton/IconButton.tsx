@@ -17,7 +17,7 @@ type Props = {
  * import { IconButton } from "../components/IconButton";
  *
  * <IconButton>
- *    <GiHamburgerMenu size={24} />
+ *   <GiHamburgerMenu size={24} />
  * </IconButton>
  */
 export const IconButton = forwardRef<HTMLButtonElement, Props>(

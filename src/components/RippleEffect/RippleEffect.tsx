@@ -26,6 +26,8 @@ type Props = {
  *
  * @example
  *
+ * import { RippleEffect } from "../components/RippleEffect";
+ *
  * <button className="relative overflow-hidden">
  *   Button with ripple effect
  *   <RippleEffect duration={750} />

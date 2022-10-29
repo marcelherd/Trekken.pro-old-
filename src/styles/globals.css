@@ -2,6 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  h1 {
+    @apply text-2xl;
+    @apply my-4;
+  }
+
+  h2 {
+    @apply text-xl;
+    @apply my-3;
+  }
+
+  h3 {
+    @apply text-lg;
+    @apply my-2;
+  }
+
+}
+
 /*
  * Montserrat[wght].ttf: Copyright 2011 The Montserrat Project Authors (https: //github.com/JulietaUla/Montserrat)
  * Montserrat-Italic[wght].ttf: Copyright 2011 The Montserrat Project Authors (https: //github.com/JulietaUla/Montserrat)

@@ -12,13 +12,13 @@ import { RippleType, useRippleResult } from "./ripple.types";
  * const { ripples, dispatchRipple } = useRipple(duration);
  *
  * return (
- *    <div
- *       onClick={(e) => dispatchRipple(e)}
- *       className="absolute top-0 left-0 h-full w-full">
- *        {ripples.map((ripple, index) => (
- *          ...
- *        ))}
- *    </div>
+ *   <div
+ *     onClick={(e) => dispatchRipple(e)}
+ *     className="absolute top-0 left-0 h-full w-full">
+ *       {ripples.map((ripple, index) => (
+ *         ...
+ *       ))}
+ *   </div>
  * );
  */
 export function useRipple<T extends HTMLElement>(
@@ -26,14 +26,13 @@ export function useRipple<T extends HTMLElement>(
 ): useRippleResult<T> {
   const [ripples, setRipples] = useState<RippleType[]>([]);
 
-  // This runs each time the using component is re-rendered
-  // due to a new ripple being dispatched.
-  // At this point, a timeout starts which cleans up any
-  // existing ripples. This timeout is reset each time the
-  // hook runs, thereby ensuring that the ripples are only
-  // removed once they have been resolved.
-  // The cleanup occurs after duration * 2 milliseconds to
-  // ensure that the use doesn't see any visual glitches.
+  // This runs each time the using component is re-rendered due to a new
+  // ripple being dispatched.
+  // At this point, a timeout starts which cleans up any existing ripples.
+  // This timeout is reset each time the hook runs, thereby ensuring that
+  // the ripples are only removed once they have all been resolved.
+  // The cleanup occurs after duration * 2 milliseconds to ensure that the
+  // user doesn't see any visual glitches.
   useEffect(() => {
     let timeout: NodeJS.Timeout | undefined = undefined;
 

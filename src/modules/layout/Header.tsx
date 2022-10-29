@@ -1,9 +1,10 @@
 import { useSession } from "next-auth/react";
-import { GiHamburgerMenu } from "react-icons/gi";
-import { IconButton } from "../../components/IconButton/IconButton";
 import { Logo } from "./Logo";
-import { Navigation } from "./Navigation";
+import { MobileNavigation, Navigation } from "./navigation";
 
+/**
+ * TODO: Document this.
+ */
 export const Header: React.FC = () => {
   const { data: session } = useSession();
 
@@ -13,14 +14,10 @@ export const Header: React.FC = () => {
         <section className="flex-1 px-4 md:px-6 lg:absolute">
           <Logo />
         </section>
-        <nav className="hidden h-full lg:mx-auto lg:block lg:w-4/6">
-          <Navigation />
-        </nav>
-        <section className="px-8 lg:hidden">
-          <IconButton>
-            <GiHamburgerMenu size={24} />
-          </IconButton>
-        </section>
+
+        <Navigation />
+        <MobileNavigation />
+
         <section className="absolute right-0 hidden items-center gap-8 px-8 lg:flex">
           {session ? "Avatar" : "Login"}
         </section>

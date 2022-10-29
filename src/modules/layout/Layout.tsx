@@ -2,9 +2,15 @@ import { Footer } from "./Footer";
 import { Header } from "./Header";
 
 type Props = {
+  /**
+   * The contents of the page.
+   */
   children?: React.ReactNode;
 };
 
+/**
+ * TODO: Document this.
+ */
 export const Layout: React.FC<Props> = ({ children }) => {
   return (
     <div className="flex h-screen flex-col text-neutral-200">

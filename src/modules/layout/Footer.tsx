@@ -1,5 +1,8 @@
 import { BsGithub, BsDiscord } from "react-icons/bs";
 
+/**
+ * TODO: Document this.
+ */
 export const Footer: React.FC = () => {
   return (
     <footer className="border-t border-neutral-600 bg-neutral-700 text-sm">

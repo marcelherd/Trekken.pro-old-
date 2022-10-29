@@ -14,7 +14,6 @@ type Props = {
  * @example
  *
  * import { GiHamburgerMenu } from "react-icons/gi";
- * import { IconButton } from "../components/IconButton";
  *
  * <IconButton>
  *   <GiHamburgerMenu size={24} />

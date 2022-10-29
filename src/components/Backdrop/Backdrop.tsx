@@ -10,8 +10,6 @@ type Props = {
  *
  * @example
  *
- * import { Backdrop } from "../components/Backdrop";
- *
  * <Backdrop>
  *   <p>Loading...</p>
  * </Backdrop>

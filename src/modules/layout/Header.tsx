@@ -3,7 +3,9 @@ import { Logo } from "./Logo";
 import { Navigation } from "./navigation";
 
 /**
- * TODO: Document this.
+ * The Header for the default page layout.
+ *
+ * @example <Header />
  */
 export const Header: React.FC = () => {
   const { data: session } = useSession();

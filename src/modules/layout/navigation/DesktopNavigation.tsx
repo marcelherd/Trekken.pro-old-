@@ -1,7 +1,10 @@
 import { NavLinks } from "./NavLinks";
 
 /**
- * TODO: Document this.
+ * The desktop navigation menu, which is only shown on devices larger
+ * than tablets.
+ *
+ * @example <MobileNavigation />
  */
 export const DesktopNavigation: React.FC = () => {
   return (

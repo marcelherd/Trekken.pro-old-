@@ -9,7 +9,13 @@ type Props = {
 };
 
 /**
- * TODO: Document this.
+ * The default page layout.
+ *
+ * @example
+ *
+ * <Layout>
+ *   <h1>Sample page</h1>
+ * </Layout>
  */
 export const Layout: React.FC<Props> = ({ children }) => {
   return (

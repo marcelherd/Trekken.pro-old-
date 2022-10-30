@@ -2,6 +2,11 @@ import { useRouter } from "next/router";
 import clsx from "clsx";
 import { routes } from "../../constants";
 
+/**
+ * Responsive list of links for user navigation based on {@link routes}.
+ *
+ * @example <NavLinks />
+ */
 export const NavLinks: React.FC = () => {
   const router = useRouter();
 

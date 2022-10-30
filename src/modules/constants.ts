@@ -1,3 +1,4 @@
+/** @see {@link https://tailwindcss.com/docs/screens} */
 export const Breakpoints = {
   sm: 640,
   md: 768,

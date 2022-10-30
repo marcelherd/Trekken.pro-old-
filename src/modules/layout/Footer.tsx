@@ -2,7 +2,9 @@ import { BsGithub, BsDiscord } from "react-icons/bs";
 import { IconButton } from "../../components/IconButton";
 
 /**
- * TODO: Document this.
+ * The footer for the default page layout.
+ *
+ * @example <Footer />
  */
 export const Footer: React.FC = () => {
   return (
@@ -18,7 +20,16 @@ export const Footer: React.FC = () => {
           <IconButton className="pt-2.5">
             <BsDiscord size={24} />
           </IconButton>
-          <IconButton>
+          <IconButton
+            onClick={() => {
+              // TODO: This should really be an href instead of a click handler
+              // and IconButton should then render as anchor tag.
+              window.open(
+                "https://github.com/marcelherd/Trekken.pro",
+                "_blank"
+              );
+            }}
+          >
             <BsGithub size={24} />
           </IconButton>
         </section>

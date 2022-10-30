@@ -6,7 +6,7 @@ export const NavLinks: React.FC = () => {
   const router = useRouter();
 
   return (
-    <ul className="flex h-full flex-col gap-8 py-8 lg:flex-row lg:py-0">
+    <ul className="flex h-full flex-col gap-8 py-4 lg:flex-row lg:py-0">
       {routes.map((item) => (
         <li
           key={item.name}

@@ -25,7 +25,7 @@ export const IconButton = forwardRef<HTMLButtonElement, Props>(
       <button
         ref={ref}
         {...props}
-        className={`relative cursor-pointer overflow-hidden rounded-full p-3 hover:bg-neutral-600 ${props.className}`}
+        className={`relative cursor-pointer overflow-hidden rounded-full p-2 hover:bg-neutral-600 ${props.className}`}
       >
         {children}
         <RippleEffect />

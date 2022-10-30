@@ -39,7 +39,7 @@ export const MobileNavigation: React.FC = () => {
     <Backdrop className="flex">
       <div className="flex-1" onClick={() => close()} />
       <nav className="fixed right-0 top-0 z-50 flex h-full w-full flex-col bg-neutral-700 shadow-2xl sm:w-3/5 md:w-1/2">
-        <div className="flex justify-end px-8 py-4">
+        <div className="flex justify-end py-3 px-4">
           <IconButton onClick={() => close()}>
             <CgClose size={24} />
           </IconButton>
@@ -49,7 +49,7 @@ export const MobileNavigation: React.FC = () => {
       </nav>
     </Backdrop>
   ) : (
-    <section className="px-4 lg:hidden">
+    <section className="flex px-4 lg:hidden">
       <IconButton onClick={() => open()}>
         <GiHamburgerMenu size={24} />
       </IconButton>

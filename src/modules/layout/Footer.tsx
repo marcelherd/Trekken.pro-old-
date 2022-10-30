@@ -1,4 +1,5 @@
 import { BsGithub, BsDiscord } from "react-icons/bs";
+import { IconButton } from "../../components/IconButton";
 
 /**
  * TODO: Document this.
@@ -14,12 +15,12 @@ export const Footer: React.FC = () => {
           <a href="/admin">Administration</a>
         </section>
         <section className="flex gap-6 md:absolute md:px-8">
-          <div className="flex gap-2">
+          <IconButton className="pt-2.5">
             <BsDiscord size={24} />
-          </div>
-          <div className="flex gap-2">
+          </IconButton>
+          <IconButton>
             <BsGithub size={24} />
-          </div>
+          </IconButton>
         </section>
       </div>
     </footer>

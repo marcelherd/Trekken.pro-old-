@@ -1,10 +1,12 @@
+import { useEffect } from "react";
 import { useMediaQuery } from "react-responsive";
 import { GiHamburgerMenu } from "react-icons/gi";
+import { CgClose } from "react-icons/cg";
 import { Breakpoints } from "../../constants";
 import { Backdrop } from "../../../components/Backdrop";
 import { IconButton } from "../../../components/IconButton";
 import { useOpenToggle } from "../../../hooks/useOpenToggle";
-import { useEffect } from "react";
+import { NavLinks } from "./NavLinks";
 
 /**
  * The mobile navigation menu, which is only shown on mobile and tablet devices.
@@ -36,8 +38,14 @@ export const MobileNavigation: React.FC = () => {
   return isOpen ? (
     <Backdrop className="flex">
       <div className="flex-1" onClick={() => close()} />
-      <nav className="fixed right-0 top-0 bottom-0 z-50 w-full bg-neutral-700 shadow-2xl sm:w-3/5 md:w-1/2">
-        <p>TODO</p>
+      <nav className="fixed right-0 top-0 z-50 flex h-full w-full flex-col bg-neutral-700 shadow-2xl sm:w-3/5 md:w-1/2">
+        <div className="flex justify-end px-8 py-4">
+          <IconButton onClick={() => close()}>
+            <CgClose size={24} />
+          </IconButton>
+        </div>
+        <NavLinks />
+        <div className="flex justify-end py-4 px-8 text-lg">Login</div>
       </nav>
     </Backdrop>
   ) : (

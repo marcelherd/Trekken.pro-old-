@@ -5,3 +5,26 @@ export const Breakpoints = {
   xl: 1280,
   "2xl": 1536,
 };
+
+export const routes = [
+  {
+    name: "Home",
+    path: "/",
+  },
+  {
+    name: "Characters",
+    path: "/characters",
+  },
+  {
+    name: "Leaderboard",
+    path: "/leaderboard",
+  },
+  {
+    name: "Tournaments",
+    path: "/tournaments",
+  },
+  {
+    name: "Guides",
+    path: "/guides",
+  },
+];

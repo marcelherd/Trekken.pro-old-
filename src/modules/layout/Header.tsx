@@ -1,6 +1,6 @@
 import { useSession } from "next-auth/react";
 import { Logo } from "./Logo";
-import { MobileNavigation, Navigation } from "./navigation";
+import { Navigation } from "./navigation";
 
 /**
  * TODO: Document this.
@@ -16,7 +16,6 @@ export const Header: React.FC = () => {
         </section>
 
         <Navigation />
-        <MobileNavigation />
 
         <section className="absolute right-0 hidden items-center gap-8 px-8 lg:flex">
           {session ? "Avatar" : "Login"}

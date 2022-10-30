@@ -7,6 +7,10 @@ module.exports = {
         Montserrat: ["Montserrat", "sans-serif"],
         BarlowCondensed: ['"Barlow Condensed"', "sans-serif"],
       },
+      screens: {
+        mobile: { max: "767px" },
+        tablet: { max: "1023px" },
+      },
     },
     fontFamily: {
       sans: ["Montserrat", "sans-serif"],

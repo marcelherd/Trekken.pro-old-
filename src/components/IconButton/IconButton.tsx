@@ -1,15 +1,15 @@
-import { forwardRef } from "react";
+import { ButtonProps, AnchorProps, IconButtonType } from "./IconButton.types";
 import { RippleEffect } from "../RippleEffect";
 
-type Props = {
-  /**
-   * The contents of the button, typically an icon.
-   */
-  children: React.ReactNode;
-} & React.ButtonHTMLAttributes<HTMLButtonElement>;
+const isAnchorProps = (
+  props: ButtonProps | AnchorProps
+): props is AnchorProps => "href" in props;
 
 /**
  * A round button that is ideally used for icons.
+ *
+ * If href is passed as prop, the button will render as anchor instead
+ * and links to the provided URL.
  *
  * @example
  *
@@ -19,17 +19,26 @@ type Props = {
  *   <GiHamburgerMenu size={24} />
  * </IconButton>
  */
-export const IconButton = forwardRef<HTMLButtonElement, Props>(
-  function IconButton({ children, ...props }, ref) {
+export const IconButton: IconButtonType = (
+  props: ButtonProps | AnchorProps
+) => {
+  const className = `relative cursor-pointer overflow-hidden rounded-full p-2 hover:bg-neutral-600 ${
+    props.className ?? ""
+  }`;
+
+  if (isAnchorProps(props)) {
     return (
-      <button
-        ref={ref}
-        {...props}
-        className={`relative cursor-pointer overflow-hidden rounded-full p-2 hover:bg-neutral-600 ${props.className}`}
-      >
-        {children}
+      <a {...props} className={`${className}`}>
+        {props.children}
         <RippleEffect />
-      </button>
+      </a>
     );
   }
-);
+
+  return (
+    <button {...props} className={className}>
+      {props.children}
+      <RippleEffect />
+    </button>
+  );
+};

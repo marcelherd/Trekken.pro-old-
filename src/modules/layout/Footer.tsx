@@ -16,19 +16,14 @@ export const Footer: React.FC = () => {
           <a href="/feedback">Feedback</a>
           <a href="/admin">Administration</a>
         </section>
-        <section className="flex gap-6 md:absolute md:px-8">
+        <section className="flex gap-2 md:absolute md:px-8">
           <IconButton className="pt-2.5">
             <BsDiscord size={24} />
           </IconButton>
           <IconButton
-            onClick={() => {
-              // TODO: This should really be an href instead of a click handler
-              // and IconButton should then render as anchor tag.
-              window.open(
-                "https://github.com/marcelherd/Trekken.pro",
-                "_blank"
-              );
-            }}
+            href="https://github.com/marcelherd/Trekken.pro"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             <BsGithub size={24} />
           </IconButton>

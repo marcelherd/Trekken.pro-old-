@@ -17,10 +17,6 @@
     @apply text-lg;
     @apply my-2;
   }
-
-  a:hover {
-    @apply text-neutral-400;
-  }
 }
 
 /*
